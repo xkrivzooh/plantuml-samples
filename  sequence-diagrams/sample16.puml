@@ -1,0 +1,33 @@
+可以设定填充区的参数配置。
+可以使用box和end box画一个盒子将参与者包裹起来。
+还可以在box关键字之后添加标题或者背景颜色。
+
+@startuml
+'配置边距
+skinparam ParticipantPadding 20
+skinparam BoxPadding 10
+
+'使用关键字box
+box "Foo1"
+participant Alice1
+participant Alice2
+end box
+box "Foo2"
+participant Bob1
+participant Bob2
+end box
+Alice1 -> Bob1 : hello
+Alice1 -> Out : out
+
+'还可以在box关键字之后添加标题或者背景颜色。
+box "Internal Service" #LightBlue
+participant Bob
+participant Alice
+end box
+participant Other
+
+Bob -> Alice : hello
+Alice -> Other : hello
+
+@enduml
+@enduml

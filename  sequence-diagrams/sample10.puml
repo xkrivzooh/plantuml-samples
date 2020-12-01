@@ -1,0 +1,17 @@
+页面标题,页眉,页脚
+使用title关键词增加标题
+使用header关键词增加页眉
+使用footer关键词增加页脚
+
+
+@startuml
+
+header Page Header
+footer Page %page% of %lastpage%
+
+title Example Title
+
+Alice -> Bob : message 1
+Alice -> Bob : message 2
+
+@enduml

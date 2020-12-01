@@ -1,0 +1,10 @@
+`skinparam responseMessageBelowArrow true`用来让response的
+消息展示在连线的下方。如果代码块中出现多次这个指令，以最后一次出现的为准。
+
+@startuml
+skinparam responseMessageBelowArrow true
+Bob -> Alice : hello
+Alice -> Bob : ok
+'skinparam responseMessageBelowArrow false
+Alice1 -> Bob : ok
+@enduml

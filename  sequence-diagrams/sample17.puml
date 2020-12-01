@@ -1,0 +1,21 @@
+强调进入和发出消息
+也就是消息的来源和去向不关心
+如果只想关注部分图示，你可以使用进入和发出箭头。
+使用方括号[和]表示图示的左、右两侧。
+
+@startuml
+[-> A: DoWork
+
+activate A
+
+A -> A: Internal call
+activate A
+
+A ->] : << createRequest >>
+'A -> B : << createRequest >>
+
+A<--] : RequestCreated
+deactivate A
+[<- A: Done
+deactivate A
+@enduml

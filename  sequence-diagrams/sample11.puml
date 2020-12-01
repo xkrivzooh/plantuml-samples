@@ -1,0 +1,26 @@
+@startuml
+
+header Page Header1
+footer Page %page% of %lastpage%
+
+title Example Title1
+
+Alice -> Bob : message 1
+Alice -> Bob : message 2
+
+newpage
+
+header Page Header2
+footer Page %page% of %lastpage%
+
+'下面这种写法的第二页的title是不起作用的，得按照下方的例子来写
+'title Example Title2
+
+Alice -> Bob : message 3
+Alice -> Bob : message 4
+
+newpage A title for the\nlast page
+
+Alice -> Bob : message 5
+Alice -> Bob : message 6
+@enduml

@@ -1,0 +1,34 @@
+我们可以通过在消息后面添加 note left 或者 note right 关键词来给消息添加注释。
+你也可以通过使用 end note 来添加多行注释。
+你可以使用 hnote 和 rnote 这两个关键字来修改备注框的形状。
+
+
+@startuml
+Alice->Bob : hello
+note left: this is a first note
+
+Bob->Alice : ok
+note right: this is another note
+
+Bob->Bob : I am thinking
+note left
+'下面是注释的话
+fuck noe
+a note
+can also be defined
+on several lines
+'上面的是注释的内容
+end note
+
+'你可以使用 hnote 和 rnote 这两个关键字来修改备注框的形状。
+caller -> server : conReq
+'hnote好像会展示为菱形
+hnote over caller : idle
+caller <- server : conConf
+'rnote好像会展示为矩形
+rnote over server
+ "r" as rectangle
+ "h" as hexagon
+endrnote
+
+@enduml

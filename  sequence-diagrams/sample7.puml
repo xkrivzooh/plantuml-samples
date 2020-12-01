@@ -1,0 +1,7 @@
+参与者可以给自己发信息，
+消息文字可以用\n来换行。
+
+
+@startuml
+Alice->Alice: This is a signal to self.\nIt also demonstrates\nmultiline \ntext
+@enduml

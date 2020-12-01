@@ -1,0 +1,29 @@
+关键字 participant 用于改变参与者的先后顺序。
+你也可以使用其它关键字来声明参与者：
+participant 文档的一种表示法，一页纸的样式
+actor 是一个人的样子
+boundary 是一个倒着的人
+control 一个自旋的圈的样子
+entity 一个圆圈，下面一个横线
+database 数据库的常见表示法，一个圆柱体
+collections 文档的常见表示法，2页纸重叠的样式
+
+
+@startuml
+' 在这里定义了参与者的顺序，先出现的定义，参与者在流程图的偏左侧
+participant Foo0
+actor Foo1
+boundary Foo2
+control Foo3
+entity Foo4
+collections Foo6
+database Foo5
+
+Foo0 --> Foo1 : fuck
+Foo1 -> Foo2 : To boundary
+Foo1 -> Foo3 : To control
+Foo1 -> Foo4 : To entity
+Foo1 -> Foo5 : To database
+Foo1 --> Foo6 : To collections
+
+@enduml

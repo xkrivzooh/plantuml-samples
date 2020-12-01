@@ -1,0 +1,24 @@
+可以使用note left of，note right of或note over在节点(participant)的相对位置放置注释。
+还可以通过修改背景色来高亮显示注释。
+以及使用关键字end note来添加多行注释。
+
+@startuml
+participant 儿子
+participant 爸爸
+note left of 儿子 #aqua
+This is displayed
+left of 儿子.
+end note
+
+note right of 儿子: This is displayed right of 儿子.
+
+note over 儿子: This is displayed over 儿子.
+
+note over 儿子, 爸爸 #FFAAAA: This is displayed\n over 爸爸 and 儿子.
+
+note over 爸爸, 儿子
+This is yet another
+example of
+a long note.
+end note
+@enduml

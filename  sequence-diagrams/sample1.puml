@@ -1,0 +1,26 @@
+
+在下面的图中，Alice和Bob是参与者
+你可以用->来绘制参与者之间传递的消息， 而不必显式地声明参与者。
+你也可以使用 --> 绘制一个虚线箭头。
+另外，你还能用 <- 和 <--，这不影响绘图，但可以提高可读性。 注意：仅适用于时序图，对于其它示意图，规则是不同的。
+
+
+
+@startuml
+' 这是一行注释
+'这也是一行注释，空格是可以没有的
+'关键字 autonumber 用于自动对消息编号。如果不加这个关键字，消息前面没有1234这样的序号
+autonumber
+Alice -> Bob: Authentication Request 文本这块不需要双引号，->代表实线
+Bob --> Alice: Authentication Response -->代表虚线
+
+autonumber 40 10
+'autonumber //start// //increment// 可以同时指定编号的初始值和每次增加的值。
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+
+autonumber 100
+'语句 autonumber //start// 用于指定编号的初始值
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+@enduml
